@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\KuliahController;
+use App\Http\Controllers\DashboardController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +23,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/profile1', [ProfileController::class, 'profile1'])->name('profile1');
+Route::get('/profile2', [ProfileController::class, 'profile2'])->name('profile2');
+Route::get('/kuliah', [KuliahController::class, 'index'])->name('kuliah');
